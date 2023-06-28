@@ -52,9 +52,9 @@ html {
 
 .heder-container{
   height: 10rem;
-  width: 800px;
+  width: 900px;
   display: grid;
-  grid-template-columns: 70% 20%;
+  grid-template-columns: 60% 20% 20%;
   align-items: center;
   /* box-shadow:var(--box-shadow-extern) ; */
   
@@ -81,5 +81,36 @@ html {
 }
 .header__btns a:hover{
   color: var(--color-light);
+  box-shadow: var(--box-shadow-intern);
+}
+
+.header__user{
+  display: flex;
+  align-items: center;
+  gap: var(--l);
+}
+.header__user p{
+  font-size: var(--font-size-s);
+  font-weight: 500;
+}
+
+.header__btn-user{
+  display: grid;
+  place-content: center;
+  width: 60px;
+  height: 60px;
+  padding: 2px;
+  border-radius: 50%;
+  font-size: var(--font-size-m);
+  color: var(--color-main);
+  box-shadow: var(--box-shadow-extern);
+  font-size: var(--font-size-l);
+  
+}
+.header__btn-user:hover{
+  color: var(--color-light);
+  box-shadow: var(--box-shadow-intern);
 
 }
+
+
