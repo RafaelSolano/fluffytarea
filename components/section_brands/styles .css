@@ -10,6 +10,9 @@
 html {
   font-size: 62.5%;
 }
+body{
+  background: #F3F3F1;
+}
 :root {
   --background-main: #F3F3F1;
   --text-input-field: #f7f7f7;
@@ -41,7 +44,7 @@ html {
   --xxl: 3.6rem;
 
   /* Efecto_sombra */
-  --box-shadow-extern: 
+  --box-shadow-extern:
     -12px -12px 20px 0px rgba(255, 255, 255, 0.80),
     10px 10px 20px 0px rgba(166, 180, 200, 0.70);
    /* Sombra_interna */
@@ -50,66 +53,35 @@ html {
     5px 5px 10px 0px rgba(166, 180, 200, 0.70) inset;
 }
 
-.heder-container{
-  height: 10rem;
-  width: 900px;
+.brands{
+  margin-top: 4rem;
+  max-width: 1200px;
+}
+.brands__title{
+  width: 100%;
+  text-align: center;
+  font-size: var(--font-size-m);
+}
+.container-brands {
   display: grid;
-  grid-template-columns: 60% 20% 20%;
-  align-items: center;
-  
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6rem;
+  margin-top: 4rem;  
 }
-
-.heder__container-btns{
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-
-}
-
-.header__btns a{
+.brand__card {
   display: grid;
   place-content: center;
-  width: 40px;
-  height: 40px;
-  padding: 2px;
-  border-radius: 50%;
-  font-size: var(--font-size-m);
-  color: var(--color-black);
+  width: 168px;
+  height: 168px;
+  border-radius: 27px;
+  background: #F3F3F1;
   box-shadow: var(--box-shadow-extern);
-
+  transition: 250ms;
 }
-.header__btns a:hover{
-  color: var(--color-light);
+.brand__card:hover{
   box-shadow: var(--box-shadow-intern);
 }
-
-.header__user{
-  display: flex;
-  align-items: center;
-  gap: var(--l);
-}
-.header__user p{
-  font-size: var(--font-size-s);
-  font-weight: 500;
-}
-
-.header__btn-user{
-  display: grid;
-  place-content: center;
-  width: 60px;
-  height: 60px;
-  padding: 2px;
-  border-radius: 50%;
-  font-size: var(--font-size-m);
-  color: var(--color-main);
-  box-shadow: var(--box-shadow-extern);
-  font-size: var(--font-size-l);
+.brand__card_img{
   
 }
-.header__btn-user:hover{
-  color: var(--color-light);
-  box-shadow: var(--box-shadow-intern);
-
-}
-
 
