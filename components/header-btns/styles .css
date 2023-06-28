@@ -10,9 +10,6 @@
 html {
   font-size: 62.5%;
 }
-body{
-  background: #F3F3F1;
-}
 :root {
   --background-main: #F3F3F1;
   --text-input-field: #f7f7f7;
@@ -44,7 +41,7 @@ body{
   --xxl: 3.6rem;
 
   /* Efecto_sombra */
-  --box-shadow-extern:
+  --box-shadow-extern: 
     -12px -12px 20px 0px rgba(255, 255, 255, 0.80),
     10px 10px 20px 0px rgba(166, 180, 200, 0.70);
    /* Sombra_interna */
@@ -53,27 +50,36 @@ body{
     5px 5px 10px 0px rgba(166, 180, 200, 0.70) inset;
 }
 
-
-
-
-#suggestions-list {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background-color: white;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: none;
+.heder-container{
+  height: 10rem;
+  width: 800px;
+  display: grid;
+  grid-template-columns: 70% 20%;
+  align-items: center;
+  /* box-shadow:var(--box-shadow-extern) ; */
+  
 }
 
-#suggestions-list li {
-  padding: 8px;
-  cursor: pointer;
+.heder__container-btns{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
 }
 
-#suggestions-list li:hover {
-  background-color: var(--background-main);
-}
+.header__btns a{
+  display: grid;
+  place-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 2px;
+  border-radius: 50%;
+  font-size: var(--font-size-m);
+  color: var(--color-black);
+  box-shadow: var(--box-shadow-extern);
 
+}
+.header__btns a:hover{
+  color: var(--color-light);
+
+}
