@@ -65,6 +65,7 @@ let container_product_card = document.querySelector('.container_product-card');
 const render_products = (arrProducts) => {
  
   let i = 0
+  container_product_card.innerHTML = '';
   
   arrProducts.forEach(product => {
     let card_product = document.createElement('div')
@@ -107,17 +108,17 @@ const render_products = (arrProducts) => {
     
     `
     
-    container_product_card.append(card_product)
     ++i
+  container_product_card.append(card_product)
+
   })
+
 }
 render_products(productos)
 
 
 
 /* --------------------------- carrito de compras --------------------------- */
-
-
 
 function existObjetoConID(array, id) {
   const objetosConID = array.filter(objeto => objeto.id == id);
@@ -128,7 +129,7 @@ function existObjetoConID(array, id) {
 let shopping_car = []
 
 
-//Agregar item al carrito de compras
+/* ------------------ //Agregar item al carrito de compras ------------------ */
 const add_to_car = (id) => {
   let product = productos.find(product => product.id == id)
 
@@ -156,19 +157,20 @@ const add_to_car = (id) => {
   render_shopping_car()
 }
 
-// renderizar la lista del carrito de compras
+/* -------------- // renderizar la lista del carrito de compras ------------- */
 
 const container_carrito = document.querySelector('.shopping_cart__list');
 
 const render_shopping_car = () => {
   console.log(shopping_car);
   let shopping_card = ''
+  let i = 0;
 
   shopping_car.forEach(product => {
     
     
     shopping_card += `
-    <div class='shopping_cart__item'>
+    <div id="${i}" class='shopping_cart__item'>
           <div class='shopping_cart__img'>
           <img src="${product.img}" alt="">
           <p>${product.nombre}</p>
@@ -181,9 +183,11 @@ const render_shopping_car = () => {
     
     `
   })
+  ++i
   container_carrito.innerHTML = shopping_card;
 
   render_shopping_car_total(shopping_car)
+  add_event_btn_delete()
   
 }
 /* ------------------- numero del productos en el carrito ------------------ */
@@ -210,10 +214,67 @@ const render_shopping_car_total = (arr) => {
 }
 
 
+/* --------------------- Eliminar del carrito de compras -------------------- */
 
 
+function add_event_btn_delete() {
+  let btn_delete = document.querySelectorAll('.shopping_cart_delete');
+  btn_delete.forEach((btn) => {
+    btn.addEventListener('click', delete_shopping_car);
+  });
+}
+  
+function delete_shopping_car(e) {
+  const id_btn = e.currentTarget.id;
+  shopping_car.splice(id_btn, 1);
+
+  render_shopping_car_total(shopping_car)
+  render_shopping_car()
 
   
+}
+
+
+/* ---------------------------------- barra --------------------------------- */
+const searchInput = document.querySelector('#search-input');
+const suggestionsList = document.getElementById('suggestions-list');
+
+// Evento de entrada en el campo de búsqueda
+searchInput.addEventListener('input', function() {
+  const inputValue = this.value.toLowerCase();
+  const filteredProducts = productos.filter(producto => producto.nombre.toLowerCase().includes(inputValue));
+  render_products(filteredProducts)
+  console.log(filteredProducts);
+
+  // Limpiar la lista de sugerencias
+  suggestionsList.innerHTML = '';
+
+  // Mostrar las sugerencias de autocompletado
+  filteredProducts.forEach(producto => {
+    const listItem = document.createElement('li');
+    listItem.textContent = producto.titulo;
+    suggestionsList.appendChild(listItem);
+  });
+
+  // Mostrar/ocultar la lista de sugerencias según corresponda
+  if (inputValue === '') {
+    suggestionsList.style.display = 'none';
+  } else {
+    suggestionsList.style.display = 'block';
+  }
+});
+
+
+
+// Evento de clic en una sugerencia
+suggestionsList.addEventListener('click', function(event) {
+  if (event.target.tagName === 'LI') {
+    const selectedProductTitle = event.target.textContent;
+    searchInput.value = selectedProductTitle;
+    suggestionsList.style.display = 'none';
+  }
+});
+
 
 
   

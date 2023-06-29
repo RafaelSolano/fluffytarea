@@ -112,11 +112,14 @@ main{
   z-index: 9;
   position: fixed;
   margin-top: 0px;
-  margin-left: 850px; 
-  
+  margin-left: 920px; 
   
 }
 
 .hidden{
   display: none;
+}
+.shopping_cart__total{
+  font-size: var(--font-size-m);
+  font-weight: 700;
 }
