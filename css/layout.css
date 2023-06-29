@@ -1,24 +1,33 @@
 /* --------------------------------- Desktop -------------------------------- */
 .body__container{
   display: grid;
+  grid-template-rows: 8rem;
+  
   grid-template-areas:
     "aside-menu header  header header header  header header  header  header  header  header header" 
     "aside-menu main    main   main   main    main   main    main    main    main    main   main "
     "aside-menu main    main   main   main    main   main    main    main    main    main   main "
     "aside-menu main    main   main   main    main   main    main    main    main    main   main "
+    "aside-menu main    main   main   main    main   main    main    main    main    main   main "
+    "aside-menu main    main   main   main    main   main    main    main    main    main   main "
+    "aside-menu main    main   main   main    main   main    main    main    main    main   main "
+    "aside-menu main    main   main   main    main   main    main    main    main    main   main "
   ;
+  
 }
 
 .heder-container{
   grid-area:  header;
-
+  
 }
 
 .menu-container{
   grid-area:  aside-menu;
+  
 }
 .main-container{
   grid-area: main;
+  
 }
 
 main{

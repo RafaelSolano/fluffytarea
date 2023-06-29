@@ -65,20 +65,23 @@ html {
   gap: 2rem;
 
 }
-
-.header__btns a{
+.header_btn_shoppin-cart,
+.header_btn_fav,
+.header_btn_alerts {
   display: grid;
   place-content: center;
   width: 40px;
   height: 40px;
-  padding: 2px;
+  padding: 5px;
   border-radius: 50%;
-  font-size: var(--font-size-m);
+  font-size: var(--font-size-l);
   color: var(--color-black);
   box-shadow: var(--box-shadow-extern);
 
 }
-.header__btns a:hover{
+.header_btn_shoppin-cart:hover,
+.header_btn_fav:hover,
+.header_btn_alerts:hover{
   color: var(--color-light);
   box-shadow: var(--box-shadow-intern);
 }

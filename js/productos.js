@@ -1,4 +1,4 @@
-const productos=[
+let productos=[
     {   id:1,
         img:"https://laika.com.co/cdn-cgi/image/fit=scale-down,width=250,format=auto,quality=80,onerror=redirect/https://laikapp.s3.amazonaws.com/dev_images_products/642_181490_Hills___Science_Diet_Puppy_Small_Bites_Dog_1659549007_800x800.jpg",
         nombre: "Hills  ",
@@ -42,7 +42,7 @@ const productos=[
         Descripcion:" Razas Pequeñas",
         precio: 50.156,
     },
-    {   
+    {
         id:8,
         img:"https://laika.com.co/cdn-cgi/image/fit=scale-down,width=250,format=auto,quality=80,onerror=redirect/https://laikapp.s3.amazonaws.com/dev_images_products/18833_133298_DOG_CHOW___TODOS_LOS_TAMA__OS_CON_CORDERO_1643318082_500x500.jpg",
         nombre: "Dog Chow ",

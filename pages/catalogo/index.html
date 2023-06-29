@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,18 +14,21 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap" rel="stylesheet">
-  
- 
-  <!-- --------------------------------- css --------------------------------- -->
-  <link rel="stylesheet" href="../../components/side-bar-menu/styles .css">
-  <link rel="stylesheet" href="../../components/search-bar/styles .css">
-  <link rel="stylesheet" href="../../components/header-btns/styles .css">
-  <link rel="stylesheet" href="../../css/layout.css">
 
-  <link rel="stylesheet" href="../../components/categories-btns/styles .css">
+
+  <!-- --------------------------------- css --------------------------------- -->
+  <link rel="stylesheet" href="../../components/side-bar-menu/styles.css">
+  <link rel="stylesheet" href="../../components/search-bar/styles.css">
+  <link rel="stylesheet" href="../../components/header-btns/styles.css">
+  <!-- <link rel="stylesheet" href="../../css/layout.css"> -->
+
+  <link rel="stylesheet" href="../../components/product-card/styles.css">
+  <link rel="stylesheet" href="../../components/categories-btns/styles.css">
+  <link rel="stylesheet" href="./styles.css">
   <title>Catalogo</title>
 
 </head>
+
 <body class='body__container'>
   <!-- ------------------------------- header -------------------------------- -->
   <header class='heder-container'>
@@ -48,33 +52,33 @@
 
     </div>
     <!-- ----------------------------------------------------------------------- -->
-  
-  <!-- ----------------------------------------------------------------------- -->
-  <section class='header__btns'>
-    <div class='heder__container-btns'>
-      <a href="" class='header_btn_shoppin-cart'>
-        <i class="fa-solid fa-bag-shopping"></i>
 
-      </a>
-      <a href=""class='header_btn_fav'>
-        <i class="fa-regular fa-heart"></i>
-      </a>
-      <a href=""class='header_btn_alerts'>
-        <i class="fa-regular fa-bell"></i>
-      </a>
+    <!-- ----------------------------------------------------------------------- -->
+    <section class='header__btns'>
+      <div class='heder__container-btns'>
+        <div  class='header_btn_shoppin-cart'>
+          <i class="fa-solid fa-bag-shopping"></i>
 
-    </div>
+        </div>
+        <div class='header_btn_fav'>
+          <i class="fa-regular fa-heart"></i>
+        </div>
+        <div class='header_btn_alerts'>
+          <i class="fa-regular fa-bell"></i>
+        </div>
+
+      </div>
+
+    </section>
 
     
-
-  </section>
-  <div class="header__user">
-    <p>¡Bienvenido,<br> Usuario!</p>
-    <div class='header__btn-user'>
-      <p></p>
-      <i class="fa-solid fa-user"></i>
+    <div class="header__user">
+      <p>¡Bienvenido,<br> Usuario!</p>
+      <div class='header__btn-user'>
+        <p></p>
+        <i class="fa-solid fa-user"></i>
+      </div>
     </div>
-  </div>
 
   </header>
   <!-- ----------------------------------------------------------------------- -->
@@ -83,7 +87,7 @@
     <h3>Categorias</h3>
 
     <div class='categories__btns-container'>
-      
+
       <div class='categories__btn'>
         <div class='categories__icon'>
           <i class="fa-solid fa-bowl-food"></i>
@@ -130,7 +134,7 @@
 
   </section>
   <!-- ----------------------------------------------------------------------- -->
-  
+
   <!-- -------------------------------- menu --------------------------------- -->
   <aside class='menu-container'>
     <nav class='menu__nav'>
@@ -162,7 +166,7 @@
           </h3>
         </a>
 
-        <a  href='./products.html' id='menu__products' class="menu__item-text active">
+        <a href='./products.html' id='menu__products' class="menu__item-text active">
           <h3>
             <i class="fas fa-bone"></i>
             <span class="nav-item">Productos</span>
@@ -195,6 +199,18 @@
   </aside>
   <!-- fin menu ----------------------------------------------------------------------- -->
 
-  <script src='../../components/side-bar-menu/'></script>
+  <main class='main-container'>
+
+    <section class='products-container'>
+      <div class='container_product-card'>
+        <!-- --------------- Aca se renderizan los productos desde js --------------- -->
+      </div>
+
+    </section>
+  </main>
+  <script src='./script.js'></script>
+  <script src='../../components/side-bar-menu/script.js'></script>
+  <!-- <script src='../../components/product-card/script.js'></script> -->
 </body>
+
 </html>
