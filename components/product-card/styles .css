@@ -56,17 +56,14 @@ body{
 
 .container_product-card{
   margin-top: var(--xxl);
-
-  
 }
 
 .card-product{
   width: 30rem ;
   height: 44rem;
   cursor: pointer;
-  
-
 }
+
 .card-product__img{
   position: relative;
   left: 6rem;
@@ -80,33 +77,28 @@ body{
   width: 315px;
   height: 337px;
   padding-top: 9rem;
-
   border-radius: 40px;
   background: var(--background-main);
   box-shadow: var(--box-shadow-extern);
-
-
+}
+.card-product__content-txt:hover{
+  box-shadow: var(--box-shadow-intern);
 }
 .card-product__text-main{
   text-align: center;
   padding: var(--xl) ;
-
 }
 .card-product__title{
   font-size: var(--font-size-m);
   font-weight: 700;
-
 }
 .card-product__stars{
   font-size: var(--font-size-m);
   color: var(--color-stars) ;
   text-shadow: 1px 2px var(--color-black);
-
-
 }
 .card-product__footer{
   padding:   var(--xl) ;
-
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -116,13 +108,11 @@ body{
 .card-product__total{
   font-size: var(--font-size-l);
   font-weight: 700;
-
 }
 .card-product__btn-cont{
   display: flex;
   font-size: var(--font-size-l);
   gap: var(--xxl);
-
 }
 .card-product__btn-add-shopping,
 .card-product__btn-add-fav {
@@ -135,15 +125,14 @@ body{
   border-radius: 50%;
   box-shadow: var(--box-shadow-extern);
   transition: all 350ms;
-
   cursor: pointer;
   
 }
+
 .card-product__btn-add-shopping:hover,
 .card-product__btn-add-fav:hover{
   box-shadow: var(--box-shadow-intern);
 }
-
 
 .card-product__btn-add-shopping{
   color: var(--color-main);
@@ -151,7 +140,6 @@ body{
 
 .card-product__btn-add-fav{
   color: var(--color-warning);
-
 }
 
 
