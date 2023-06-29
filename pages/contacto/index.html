@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- bootstrap -->
+
 
   <!-- -------------------------------- fonts -------------------------------- -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,41 +28,13 @@
   <link rel="stylesheet" href="../../components/categories-btns/styles.css">
   <link rel="stylesheet" href="../../components/shopping-car/styles.css">
   <link rel="stylesheet" href="./styles.css">
-  <link rel="icon" type="image/x-icon" href="../../img/Imagotipo.png" />
-  
-  <title>Catalogo</title>
+
+  <title>Contacto</title>
 
 </head>
 
 <body class='body__container'>
 
-  <!-- ---------------------------- shopping car ----------------------------- -->
-  <div class='shopping_cart hidden'>
-    <div class='shopping_cart__header'>
-      <i class="fa-solid fa-arrow-left"></i>
-      <h3>Carrito de compras</h3>
-
-    </div>
-
-    <div class='shopping_cart__list'>
-       
-
-    </div>
-
-
-    <div class='shopping_cart__footer'>
-      <div class='shopping_cart__total'>
-        <p>Total: $<span class='shopping_car__total-text'> </span> </p>
-      </div >
-      <div class='shopping_cart__btn-pay'>
-        <p> Ir a Pagar</p>
-      </di>
-    </div>
-  </div>
-  
-
-  </div>
-<!-- ----------------------------------------------------------------------- -->
 
   <!-- ------------------------------- header -------------------------------- -->
   <header class='heder-container'>
@@ -87,10 +61,10 @@
 
     <!-- ----------------------------------------------------------------------- -->
     <section class='header__btns'>
-      
+
 
       <div class='heder__container-btns'>
-        <div  class='header_btn_shoppin-cart'>
+        <div class='header_btn_shoppin-cart'>
           <i class="fa-solid fa-bag-shopping"></i>
 
 
@@ -107,74 +81,21 @@
 
     </section>
 
-    
+
     <div class="header__user">
       <p>¡Bienvenido,<br> Usuario!</p>
       <div class='header__btn-user'>
         <p></p>
         <i class="fa-solid fa-user"></i>
       </div>
-      
+
     </div>
 
-    
-    
+
+
 
   </header>
-  
-  <!-- ----------------------------- categorias ------------------------------ -->
-  <section class='categories-container'>
-    <h3>Categorias</h3>
 
-    <div class='categories__btns-container'>
-
-      <div class='categories__btn'>
-        <div class='categories__icon'>
-          <i class="fa-solid fa-bowl-food"></i>
-        </div>
-        <p class='categories__text'> Alimento</p>
-      </div>
-
-      <div class='categories__btn'>
-        <div class='categories__icon'>
-          <i class="fa-solid fa-bone"></i>
-        </div>
-        <p class='categories__text'> Snacks</p>
-      </div>
-
-      <div class='categories__btn'>
-        <div class='categories__icon'>
-          <i class="fa-sharp fa-solid fa-baseball"></i>
-
-        </div>
-        <p class='categories__text'> Juguetes</p>
-      </div>
-
-      <div class='categories__btn'>
-        <div class='categories__icon'>
-          <i class="fa-solid fa-shirt"></i>
-        </div>
-        <p class='categories__text'> Accesorios</p>
-      </div>
-
-      <div class='categories__btn'>
-        <div class='categories__icon'>
-          <i class="fa-solid fa-house-medical"></i>
-        </div>
-        <p class='categories__text'> FarmaPet</p>
-      </div>
-
-      <div class='categories__btn'>
-        <div class='categories__icon'>
-          <i class="fa-solid fa-pump-soap"></i>
-        </div>
-        <p class='categories__text'> Higiene</p>
-      </div>
-    </div>
-
-  
-  </section>
-  <!-- ----------------------------------------------------------------------- -->
 
   <!-- -------------------------------- menu --------------------------------- -->
   <aside class='menu-container'>
@@ -207,7 +128,7 @@
           </h3>
         </a>
 
-        <a href='#' id='menu__products' class="menu__item-text active">
+        <a href='../catalogo/index.html' id='menu__products' class="menu__item-text ">
           <h3>
             <i class="fas fa-bone"></i>
             <span class="nav-item">Productos</span>
@@ -221,14 +142,14 @@
           </h3>
         </a>
 
-        <a href='../../pages/nosotros/index.html' class="menu__item-text">
+        <a href='../nosotros/index.html' class="menu__item-text ">
           <h3>
             <i class="fas fa-user-friends"></i>
             <span class="nav-item">Nosotros</span>
           </h3>
         </a>
 
-        <a href='https://ariaxviii.github.io/tarea5-Formulario/' class="menu__item-text">
+        <a href='#' class="menu__item-text active">
           <h3>
             <i class="fa-solid fa-phone"></i>
             <span class="nav-item">Contacto</span>
@@ -241,20 +162,85 @@
   <!-- fin menu ----------------------------------------------------------------------- -->
 
   <main class='main-container'>
+    <section class='form-container'>
+
+      <section class="container__form">
+        <form action="">
+          <fieldset class="formulario">
+            <legend class="legend-form">Contáctanos</legend>
+
+            <!-- ------------------------------- nombre -------------------------------- -->
+            <div class="formulario__input input-txt">
+              <label for="nombre">
+                <i class="fa-sharp fa-solid fa-user"></i>
+                Nombre*:</label>
+              <input type="text" id="nombre" placeholder="Nombre Apellido" name="i_nombre"
+                pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}"
+                required>
+            </div>
+
+            <!-- -------------------------------- email -------------------------------- -->
+
+            <div class="formulario__input input-txt">
+              <label for="email">
+                <i class="fa-sharp fa-solid fa-envelope"></i>
+                Email addres*:</label>
+              <input type="email" id="email" placeholder="email_addres@gmail.com" name="i_email"
+                pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
+            </div>
+
+            <!-- ------------------------------ textArea ------------------------------- -->
+
+            <div class="formulario__input input-txt">
+              <label for="i_msn">
+                <i class="fa-sharp fa-solid fa-user"></i>
+                Mensaje:</label>
+              <textarea   id="msn" placeholder="mensaje..." name="i_msn"
+                required/>
+            </div>
+
+            <!-- ------------------------------- botones ------------------------------- -->
+
+            <div>
+              <button class="form__btn" type="submit">Registrarse</button>
+            </div>
+          </fieldset>
+        </form>
 
 
-    <section class='products-container'>
-      <div class='container_product-card'>
-        <!-- --------------- Aca se renderizan los productos desde js --------------- -->
+      </section>
+
+
+
+
+
+      <div class='form__social--links '>
+
       </div>
 
+
+      </div>
+
+
+
+
+
+
+
+
+
     </section>
+
+
+
   </main>
   <script src='./script.js'></script>
   <script src='../../components/side-bar-menu/script.js'></script>
   <script src='../../components/shopping-car/script.js'></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <!-- <script src='../../components/product-card/script.js'></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
