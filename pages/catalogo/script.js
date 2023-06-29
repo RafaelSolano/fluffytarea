@@ -260,7 +260,7 @@ searchInput.addEventListener('input', function() {
   if (inputValue === '') {
     suggestionsList.style.display = 'none';
   } else {
-    suggestionsList.style.display = 'block';
+    suggestionsList.style.display = 'none';
   }
 });
 
@@ -268,7 +268,7 @@ searchInput.addEventListener('input', function() {
 
 // Evento de clic en una sugerencia
 suggestionsList.addEventListener('click', function(event) {
-  if (event.target.tagName === 'LI') {
+  if (event.target.tagName === 'li') {
     const selectedProductTitle = event.target.textContent;
     searchInput.value = selectedProductTitle;
     suggestionsList.style.display = 'none';

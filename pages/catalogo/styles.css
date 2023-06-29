@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  list-style: none;
+  /* list-style: none; */
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
 }
@@ -123,3 +123,4 @@ main{
   font-size: var(--font-size-m);
   font-weight: 700;
 }
+
