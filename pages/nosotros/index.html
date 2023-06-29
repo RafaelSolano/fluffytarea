@@ -33,34 +33,7 @@
 
 <body class='body__container'>
 
-  <!-- ---------------------------- shopping car ----------------------------- -->
-  <div class='shopping_cart hidden'>
-    <div class='shopping_cart__header'>
-      <i class="fa-solid fa-arrow-left"></i>
-      <h3>Carrito de compras</h3>
-
-    </div>
-
-    <div class='shopping_cart__list'>
-       
-
-    </div>
-
-
-    <div class='shopping_cart__footer'>
-      <div class='shopping_cart__total'>
-        <p>Total: $<span class='shopping_car__total-text'> </span> </p>
-      </div >
-      <div class='shopping_cart__btn-pay'>
-        <p> Ir a Pagar</p>
-      </di>
-    </div>
-  </div>
-  
-
-  </div>
-<!-- ----------------------------------------------------------------------- -->
-
+ 
   <!-- ------------------------------- header -------------------------------- -->
   <header class='heder-container'>
     <!-- -------------------------- barra de busqueda -------------------------- -->
@@ -121,59 +94,6 @@
 
   </header>
   
-  <!-- ----------------------------- categorias ------------------------------ -->
-  <section class='categories-container'>
-    <h3>Categorias</h3>
-
-    <div class='categories__btns-container'>
-
-      <div class='categories__btn'>
-        <div class='categories__icon'>
-          <i class="fa-solid fa-bowl-food"></i>
-        </div>
-        <p class='categories__text'> Alimento</p>
-      </div>
-
-      <div class='categories__btn'>
-        <div class='categories__icon'>
-          <i class="fa-solid fa-bone"></i>
-        </div>
-        <p class='categories__text'> Snacks</p>
-      </div>
-
-      <div class='categories__btn'>
-        <div class='categories__icon'>
-          <i class="fa-sharp fa-solid fa-baseball"></i>
-
-        </div>
-        <p class='categories__text'> Juguetes</p>
-      </div>
-
-      <div class='categories__btn'>
-        <div class='categories__icon'>
-          <i class="fa-solid fa-shirt"></i>
-        </div>
-        <p class='categories__text'> Accesorios</p>
-      </div>
-
-      <div class='categories__btn'>
-        <div class='categories__icon'>
-          <i class="fa-solid fa-house-medical"></i>
-        </div>
-        <p class='categories__text'> FarmaPet</p>
-      </div>
-
-      <div class='categories__btn'>
-        <div class='categories__icon'>
-          <i class="fa-solid fa-pump-soap"></i>
-        </div>
-        <p class='categories__text'> Higiene</p>
-      </div>
-    </div>
-
-  
-  </section>
-  <!-- ----------------------------------------------------------------------- -->
 
   <!-- -------------------------------- menu --------------------------------- -->
   <aside class='menu-container'>
@@ -206,7 +126,7 @@
           </h3>
         </a>
 
-        <a href='#' id='menu__products' class="menu__item-text active">
+        <a href='../catalogo/index.html' id='menu__products' class="menu__item-text ">
           <h3>
             <i class="fas fa-bone"></i>
             <span class="nav-item">Productos</span>
@@ -220,7 +140,7 @@
           </h3>
         </a>
 
-        <a href='../../pages/nosotros/index.html' class="menu__item-text">
+        <a href='#' class="menu__item-text active">
           <h3>
             <i class="fas fa-user-friends"></i>
             <span class="nav-item">Nosotros</span>
@@ -240,14 +160,32 @@
   <!-- fin menu ----------------------------------------------------------------------- -->
 
   <main class='main-container'>
+    <section class='about-container'>
+      <figure>
+        <img class='about_img' src="https://img.freepik.com/fotos-premium/dos-perros-gato-mirando-camara_748076-85.jpg?w=360" alt="perros y gatos uno arriba de otro">
+      </figure>
+      <div class='about__text-container'>
+        <section class='about__section-txt'>
+          <h3>Historia</h3>
+          <p>Somos la tienda en línea de mascotas con mayor variedad de productos y servicios a domicilio en Bogotá con más de 2.000 productos como: alimentos, dietas naturales, snacks, medicinas, higiene y accesorios.
 
+            Para Fluffy, la salud y bienestar de tu mascota es lo más importante. Nos esforzamos día a día por dar la mejor experiencia y servicio a los pet lovers y para que a tus peluditos no les falte nada para su cuidado y salud.</p>
+        </section>
 
-    <section class='products-container'>
-      <div class='container_product-card'>
-        <!-- --------------- Aca se renderizan los productos desde js --------------- -->
+        <section class='about__section-txt'>
+          <h3>Misión</h3>
+          <p>Brindar un servicio de excelente calidad y satisfacer las necesidades de sus mascotas, ofreciendo una excelente experiencia con los productos ofrecidos dentro de Fluffy  plataforma que se dedica a ofrecer lo mejor del mercado en pro del bienestar de tu mascota.</p>
+        </section>
+
+        <section class='about__section-txt'>
+          <h3>Visión</h3>
+          <p>Convertirnos en la plataforma virtual número uno para el cuidado de mascotas siendo reconocida por la calidad de nuestros productos y servicios.</p>
+        </section>
+        
       </div>
-
     </section>
+
+
   </main>
   <script src='./script.js'></script>
   <script src='../../components/side-bar-menu/script.js'></script>
