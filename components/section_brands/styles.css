@@ -63,8 +63,9 @@ body{
   font-size: var(--font-size-m);
 }
 .container-brands {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   gap: 6rem;
   margin-top: 4rem;  
 }

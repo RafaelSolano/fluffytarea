@@ -67,6 +67,29 @@ body{
   margin-left: 30px;
 
 }
+.shopping_cart__header{
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.shopping_cart__header i{
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: var(--font-size-m);
+  box-shadow: var(--box-shadow-extern);
+  margin-right:30px ;
+
+}
+.shopping_cart__header i:hover{
+  box-shadow: var(--box-shadow-intern);
+  color: var(--color-secondary);
+}
+.shopping_cart__header {
+  font-size: var(--font-size-s);
+  color: var(--font-color-main);
+}
 
 .shopping_cart__list{
 

@@ -92,7 +92,7 @@ const render_products = (arrProducts) => {
       </div>
 
       <div class='card-product__btn-cont'>
-        <p onclick='add_to_Car(${product.id})' class='card-product__btn-add-shopping'>
+        <p onclick='add_to_car(${product.id})' class='card-product__btn-add-shopping'>
           <i class="fa-solid fa-bag-shopping"></i>
         </p>
         <p id='fav-icon${i}' class='card-product__btn-add-fav'>
@@ -110,31 +110,106 @@ const render_products = (arrProducts) => {
     container_product_card.append(card_product)
     ++i
   })
-  
+}
+render_products(productos)
+
+
+
+/* --------------------------- carrito de compras --------------------------- */
+
+
+
+function existObjetoConID(array, id) {
+  const objetosConID = array.filter(objeto => objeto.id == id);
+  return objetosConID.length > 0;
 }
 
 
 let shopping_car = []
 
-const add_to_Car = (id) => {
-  let product = productos.find(function(objeto) {
-    return objeto.id === id;
-  });
-  console.log(product);
-  shopping_car.push(product)
-  console.log("este es el car", shopping_car);
+
+//Agregar item al carrito de compras
+const add_to_car = (id) => {
+  let product = productos.find(product => product.id == id)
+
+  if (existObjetoConID(shopping_car, product.id)) {
+    Swal.fire({
+      position: 'top-end',
+      icon: 'error',
+      title: 'Este producto ya existe',
+      showConfirmButton: false,
+      timer: 1500
+    })
   
+  } else {
+    shopping_car.push(product)
+    console.log("Objeto agregado correctamente");
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'Agregado correctamente',
+      showConfirmButton: false,
+      timer: 1500
+    })
+    
   }
+  render_shopping_car()
+}
+
+// renderizar la lista del carrito de compras
+
+const container_carrito = document.querySelector('.shopping_cart__list');
+
+const render_shopping_car = () => {
+  console.log(shopping_car);
+  let shopping_card = ''
+
+  shopping_car.forEach(product => {
+    
+    
+    shopping_card += `
+    <div class='shopping_cart__item'>
+          <div class='shopping_cart__img'>
+          <img src="${product.img}" alt="">
+          <p>${product.nombre}</p>
+          <p class='shopping_cart_delete'><i class="fa-solid fa-trash-can"></i></i></p>
+        </div>
+          <div class='shopping_cart__price'>
+          <p>valor: $ ${product.precio}</p>
+          </div>
+      </div>
+    
+    `
+  })
+  container_carrito.innerHTML = shopping_card;
+
+  render_shopping_car_total(shopping_car)
   
+}
+/* ------------------- numero del productos en el carrito ------------------ */
+
+const numeroCarrito = document.querySelector('.count-product');
+const actualizarNumeroCarrito = (carrito) => {
+  let num = carrito.length;
+  numeroCarrito.textContent = num;
+}
 
 
+/* ------------------------------- suma total ------------------------------- */
+const sum_total_car = (arrayObjetos) => {
+  let total = 0;
+  arrayObjetos.forEach(element => {
+    total += element.precio;
+  })
+  return total
+}
 
-render_products(productos)
+const render_shopping_car_total = (arr) => {
+  const total_txt = document.querySelector('.shopping_car__total-text');
+  total_txt.textContent = `${sum_total_car(arr).toFixed(2)}`
+}
 
-let btn_shoppin_cart = document.querySelector('.header_btn_shoppin-cart');
-btn_shoppin_cart.addEventListener("click", () => {
-  console.log("carrito");
-})
+
 
 
 

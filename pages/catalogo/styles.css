@@ -104,3 +104,19 @@ main{
   grid-template-columns: repeat(3, 1fr);
   gap: 4rem;
 }
+
+
+/* ------------------------------ shopping cart ----------------------------- */
+
+.shopping_cart{
+  z-index: 9;
+  position: fixed;
+  margin-top: 0px;
+  margin-left: 850px; 
+  
+  
+}
+
+.hidden{
+  display: none;
+}
