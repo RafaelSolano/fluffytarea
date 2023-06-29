@@ -72,9 +72,9 @@ const render_products = (arrProducts) => {
     card_product.classList.add('card-product')
     card_product.innerHTML = `
 
-    <figure>
+    
     <img class='card-product__img' src="${product.img}" alt="">
-  </figure>
+ 
   <div class="card-product__content-txt">
     <div class='card-product__text-main'>
       <p class='card-product__title'>${product.nombre}</p>
